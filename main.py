@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     print(asignatura1)
     print(grupo1)
-    print(grupo1.grado)
+    print(grupo1.grado) 
 
     grupo2 = Grupo("Grupo 5", [], ["Alejandro", "Carlos"])
 
