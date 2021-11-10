@@ -1,5 +1,5 @@
 
-from asignatura import Asignatura
+from classroom.asignatura import Asignatura
 
 class Grupo:
 
@@ -19,8 +19,10 @@ class Grupo:
             self.listadoAlumnos = [alumno]
         elif(lista is None):
             self.listadoAlumnos.append(alumno)   
+        elif(lista is not None and self.listadoAlumnos is None):
+            self.listadoAlumnos =  lista + [alumno]
         else:
-            self.listadoAlumnos = self.listadoAlumnos + lista + [alumno]
+            self.listadoAlumnos =  self.listadoAlumnos + lista + [alumno]
     
     def __str__(self):
         cadena = "Grupo de estudiantes: " + self._grupo
@@ -29,4 +31,8 @@ class Grupo:
     @ classmethod
     def asignarNombre(cls, nombre="Grado 6"):
         cls.grado = nombre
+
+if __name__ == "__main__":
+    a= Asignatura("Mates")
+    print(a)
 
